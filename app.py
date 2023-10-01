@@ -13,6 +13,10 @@ def verifica_string_em_lista(string_a_verificar, lista_de_strings):
     return string_a_verificar in lista_de_strings
 #=================================
 
+@app.route('/test' , methods=['GET'])
+def getTest():
+    return jsonify({'message': 'API funcionando'}), 200
+
 @app.route('/apime2check',methods=['GET'])
 def getData():
     data = request.get_json()
